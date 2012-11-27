@@ -1,7 +1,16 @@
-__意义：__PHP实验室。围绕PHP做各种尝试。
+__意义：__
 
-__功能：__Web工具集合。
+    学C、Lua；
+    练习Python；
+    操练各种优秀的开源项目；
+    研究分词；
+    研究服务器架构。
 
-__特色：__用PHP封装的文本数据库 - ConfDB
+__功能：__人工智能。
 
-    PHP + jQuery
+__特色：__自动搭建运行环境的脚本。
+
+    C + Lua + Python
+    Varnish + Tengine + Tornado
+    Solr + Redis + mongoDB
+    msgpack + ZMQ
