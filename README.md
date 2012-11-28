@@ -10,7 +10,5 @@ __功能：__人工智能。
 
 __特色：__管理运行环境的shell脚本。
 
-    C + Lua + Python
-    Varnish + Tengine + Tornado
-    Solr + Redis + mongoDB
-    msgpack + ZMQ
+    C + Lua + Solr
+    Python + Tornado 
