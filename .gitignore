@@ -1,8 +1,3 @@
 *.swp
-*.js~
-*.css~
-*.ini~
-*.pyc
-*.c~
-*.h~
-*.json
+*.txt
+wall-e

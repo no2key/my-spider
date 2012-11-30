@@ -5,6 +5,6 @@
 filename=wall-e
 
 gcc -c $filename.c
-gcc -l curl -l json $filename.o -o $filename
+gcc -l curl $filename.o -o $filename
 rm -f $filename.o
-./$filename
+./$filename test 14
