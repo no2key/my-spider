@@ -7,4 +7,4 @@ filename=wall-e
 gcc -c $filename.c
 gcc -l curl $filename.o -o $filename
 rm -f $filename.o
-./$filename test 14
+./$filename

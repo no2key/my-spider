@@ -2,17 +2,23 @@
 #include <curl/curl.h>
 
 int main(int argc, char *argv[]){
-    char config_file[] = "config.txt";
-    char config_info[1024];
-    int fp;
+    char cfg_file[] = "config.txt";
+    char cfg_info[1024];
+    char cfg_line[100];
+    char cfg_key[50];
+    char cfg_value[100];
+    FILE *fp;
 
-    fp = open(config_file, 'r');
-    read(fp, config_info, 1024);
-    printf("%s\n", config_info);
+    fp = fopen(cfg_file, "r");
+
+    while(fgets(cfg_line, 100, fp) != NULL){
+        printf("%s\n", cfg_line);
+    }
+
+    fclose(fp);
 
     return 0;
 }
-
 
 // @todo 获得一个url的响应数据。
 /*
