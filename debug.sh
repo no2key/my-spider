@@ -8,3 +8,4 @@ gcc -c $filename.c
 gcc -l curl $filename.o -o $filename
 rm -f $filename.o
 ./$filename
+rm -f $filename
