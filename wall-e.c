@@ -5,11 +5,7 @@
 #include <curl/curl.h>
 
 int main(int argc, char *argv[]){
-    char cfg_file[] = "config.txt";
-    char cfg_info[1024];
-    char cfg_line[100];
-    char cfg_key[50];
-    char cfg_value[100];
+    char cfg_file[] = "config.txt", cfg_info[1024];
     char *task, *queue_host, *queue_port;
     int fp;
 
@@ -24,10 +20,6 @@ int main(int argc, char *argv[]){
     task = strtok(cfg_info, "=");
     queue_host = strtok(NULL, "=");
     queue_port = strtok(NULL, "=");
-
-    printf("%s\n", task);
-    printf("%s\n", queue_host);
-    printf("%s\n", queue_port);
 
     return 0;
 }
