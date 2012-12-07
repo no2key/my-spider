@@ -31,12 +31,12 @@ int main(int argc, char *argv[]){
     return 0;
 }
 
-// @todo 获得一个url的响应数据。
-/*
-int fetch_data(char[200] url){
+/**
+ * 获得一个url的响应数据。
+ */
+int fetch_data(char* url){
        CURL *curl;
        CURLcode res;
-
        curl = curl_easy_init();
 
        if(curl){
@@ -50,7 +50,6 @@ int fetch_data(char[200] url){
            curl_easy_cleanup(curl);
        }
 }
-*/
 
 /**
  * 字符串替换。
