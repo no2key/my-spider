@@ -1,3 +1,4 @@
-task=osc_favorite
-queue_host=127.0.0.1
-queue_port=6379
+url_list=osc_favorite.txt
+mongodb_host=127.0.0.1
+mongodb_port=27017
+

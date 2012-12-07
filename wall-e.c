@@ -6,20 +6,24 @@
 
 int main(int argc, char *argv[]){
     char cfg_file[] = "config.txt", cfg_info[1024];
-    char *task, *queue_host, *queue_port;
+    char *url_list, *mongodb_host, *mongodb_port;
     int fp;
 
     fp = open(cfg_file, O_RDONLY);
     read(fp, cfg_info, 1024);
 
-    str_replace(cfg_info, "task", "");
-    str_replace(cfg_info, "queue_host", "");
-    str_replace(cfg_info, "queue_port", "");
+    str_replace(cfg_info, "url_list", "");
+    str_replace(cfg_info, "mongodb_host", "");
+    str_replace(cfg_info, "mongodb_port", "");
     str_replace(cfg_info, "\n", "");
 
-    task = strtok(cfg_info, "=");
-    queue_host = strtok(NULL, "=");
-    queue_port = strtok(NULL, "=");
+    url_list = strtok(cfg_info, "=");
+    mongodb_host = strtok(NULL, "=");
+    mongodb_port = strtok(NULL, "=");
+
+    printf("URL list: %s\n", url_list);
+    printf("mongoDB host: %s\n", mongodb_host);
+    printf("mongoDB port: %s\n", mongodb_port);
 
     return 0;
 }
