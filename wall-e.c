@@ -21,9 +21,12 @@ int main(int argc, char *argv[]){
     mongodb_host = strtok(NULL, "=");
     mongodb_port = strtok(NULL, "=");
 
+    printf("\n===================== loading config =========================\n\n", "");
     printf("URL list: %s\n", url_list);
     printf("mongoDB host: %s\n", mongodb_host);
     printf("mongoDB port: %s\n", mongodb_port);
+
+    printf("\n============== start fetching page information ===============\n\n", "");
 
     return 0;
 }
