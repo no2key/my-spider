@@ -27,6 +27,7 @@ int main(int argc, char *argv[]){
     printf("mongoDB port: %s\n", mongodb_port);
 
     printf("\n============== start fetching page information ===============\n\n", "");
+    fetch_data("http://www.baidu.com");
 
     return 0;
 }
@@ -35,20 +36,17 @@ int main(int argc, char *argv[]){
  * 获得一个url的响应数据。
  */
 int fetch_data(char* url){
-       CURL *curl;
-       CURLcode res;
-       curl = curl_easy_init();
+    CURL *curl;
+    CURLcode res;
+    extern size_t write_data(char *ptr, size_t size, size_t nmemb, void *userdata);
 
-       if(curl){
-           curl_easy_setopt(curl, CURLOPT_URL, url);
-           res = curl_easy_perform(curl);
+    curl = curl_easy_init();
+    curl_easy_setopt(curl, CURLOPT_URL, url);
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &write_data);
+    curl_easy_perform(curl);
+    curl_easy_cleanup(curl);
 
-           if(res != CURLE_OK){
-               fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
-           }
-
-           curl_easy_cleanup(curl);
-       }
+    return 0;
 }
 
 /**
@@ -81,6 +79,12 @@ int str_replace(char* str,char* str_src, char* str_des){
 
     strcat(buff,buff2);
     strcpy(str,buff);
+
+    return 0;
+}
+
+size_t write_data(char *ptr, size_t size, size_t nmemb, void *userdata){
+    printf("%s\n", ptr);
 
     return 0;
 }
