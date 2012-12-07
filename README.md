@@ -1,7 +1,7 @@
-__意义：__学习C、Lua、Redis。
+__意义：__学习C语言。
 
 __功能：__网络爬虫。
 
-__特色：__做代理的肉鸡网络。
+__特色：__只有一个源代码文件。
 
-    C + Lua + Redis + ZMQ + msgpack
+    C + ZMQ + msgpack + mongoDB
