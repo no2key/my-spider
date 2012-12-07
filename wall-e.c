@@ -51,6 +51,13 @@ int fetch_data(char[200] url){
        }
 }
 */
+
+/**
+ * 字符串替换。
+ * @param char* 待处理字符串。
+ * @param char* 旧字符串。
+ * @param char* 新字符串。
+ */
 int str_replace(char* str,char* str_src, char* str_des){
     char *ptr=NULL;
     char buff[256];
